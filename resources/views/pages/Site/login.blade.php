@@ -26,7 +26,12 @@
                   <label for="InputPassword" class="form-label">Password</label>
                   <input type="password" class="form-control" id="InputPassword" name="password">
                 </div>
+
                 <button type="submit" class="btn btn-primary">Submit</button>
+            <div>
+                <a class="link-success" href="{{ route('user.loginWithGoogle') }}">Login With Google</a>
+                <a class="link-info" href="{{ route('user.loginWithFacebook') }}">Login With Facebook</a>
+            </div>
               </form>
         </div>
       </div>

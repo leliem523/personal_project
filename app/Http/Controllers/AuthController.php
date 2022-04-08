@@ -8,15 +8,16 @@ use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
+use Laravel\Socialite\Facades\Socialite;
 
 class AuthController extends Controller
 {
     public function login()
     {
         if(Auth::check()){
-            return redirect()->route('user.welcome');
+            return redirect()->route('user.home');
         }
-        return view('login');
+        return view('pages/Site/login');
     }
 
     public function postLogin(LoginRequest $request)
@@ -29,7 +30,7 @@ class AuthController extends Controller
         }
 
         Auth::login($user, true);
-        return redirect()->route('user.welcome');
+        return redirect()->route('user.home');
     }
 
     public function register()
@@ -60,8 +61,35 @@ class AuthController extends Controller
 
     }
 
+    public function loginWithGoogleRedirect()
+    {
+        return Socialite::driver('google')->redirect();
+    }
+
+    public function loginWithGoogleCallback()
+    {
+        $user = Socialite::driver('google')->user();
+        dd($user);
+    }
+    public function loginWithFacebookRedirect()
+    {
+        return Socialite::driver('facebook')->redirect();
+    }
+
+    public function loginWithFacebookCallback()
+    {
+        $user = Socialite::driver('facebook')->user();
+        dd($user);
+    }
+
+    public function loginWithFacebook()
+    {
+        # code...
+    }
+
     public function logout(Request $request)
     {
         Auth::logout();
+        return back();
     }
 }
