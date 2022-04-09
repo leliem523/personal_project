@@ -367,7 +367,7 @@
                 </div>
                 <div class="trend__item">
                     <div class="trend__item__pic">
-                        <img src="img/trend/bs-1.jpg" alt="">
+                        <img src="/assets/img/trend/bs-1.jpg" alt="">
                     </div>
                     <div class="trend__item__text">
                         <h6>Cotton T-Shirt</h6>
@@ -383,7 +383,7 @@
                 </div>
                 <div class="trend__item">
                     <div class="trend__item__pic">
-                        <img src="assets/img/trend/bs-2.jpg" alt="">
+                        <img src="/assets/img/trend/bs-2.jpg" alt="">
                     </div>
                     <div class="trend__item__text">
                         <h6>Zip-pockets pebbled tote <br />briefcase</h6>
@@ -399,7 +399,7 @@
                 </div>
                 <div class="trend__item">
                     <div class="trend__item__pic">
-                        <img src="assets/img/trend/bs-3.jpg" alt="">
+                        <img src="/assets/img/trend/bs-3.jpg" alt="">
                     </div>
                     <div class="trend__item__text">
                         <h6>Round leather bag</h6>
